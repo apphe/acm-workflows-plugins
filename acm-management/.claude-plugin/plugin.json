@@ -1,0 +1,9 @@
+{
+  "name": "acm-management",
+  "version": "1.0.0",
+  "description": "ACM support, analysis, and management workflows",
+  "author": "apphe",
+  "skills": [
+    "acm-support-analyzer"
+  ]
+}
