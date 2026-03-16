@@ -1,0 +1,14 @@
+{
+  "name": "apphe-acm-plugins",
+  "version": "1.0.0",
+  "description": "ACM (Advanced Cluster Management) workflows and automation plugins",
+  "author": "apphe",
+  "plugins": [
+    {
+      "name": "acm-management",
+      "path": "acm-management",
+      "description": "ACM support, analysis, and management workflows",
+      "version": "1.0.0"
+    }
+  ]
+}
