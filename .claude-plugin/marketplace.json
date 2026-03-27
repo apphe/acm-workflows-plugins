@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "apphe-acm-workflows-plugins",
+  "version": "1.0.0",
+  "description": "Personal ACM management and workflow plugins",
+  "owner": {
+    "name": "apphe"
+  },
+  "plugins": [
+    {
+      "name": "acm-management",
+      "description": "ACM support, analysis, and management workflows including weekly Jira status reports and support exception analysis",
+      "version": "1.0.0",
+      "author": {
+        "name": "apphe"
+      },
+      "source": "./acm-management",
+      "category": "productivity"
+    }
+  ]
+}
