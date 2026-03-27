@@ -24,6 +24,22 @@ Analyze ACM support exception requests against test data from Google Docs.
 - Details: Findings with Jira links
 - Recommendation: APPROVE | NEEDS REVIEW
 
+### weekly-jira-status
+Generate weekly Jira status reports for Server Foundation and Maestro teams.
+
+**Usage:**
+```
+/acm-management:weekly-jira-status        # last 7 days (default)
+/acm-management:weekly-jira-status 14     # last 14 days
+/acm-management:weekly-jira-status 30     # last 30 days
+```
+
+**Features:**
+- Queries bugs (SFDC Cases > 0, Critical/Blocker), stories, and vulnerabilities
+- Groups stories by parent Epic with child progress statistics
+- Groups vulnerabilities by CVE with issue count
+- Organizes output by Activity Type
+
 ## Requirements
 
 - Google credentials configured for gdoc-downloader
