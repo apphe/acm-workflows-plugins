@@ -25,12 +25,13 @@ When this skill is invoked:
 
 ### Step 1: Download Test Data
 
-Use the gdoc-downloader tool to fetch the latest ACM test data:
-- Document URL: `https://docs.google.com/document/d/1TW_Mki_ye7d7vcII2al35BvdSiYmJl2yoK_qFlSs5QE/edit?tab=t.0`
-- Format: markdown
-- This document contains the tested ACM configurations
+Use the gdoc-export skill (sibling skill in this plugin) to fetch the latest ACM test data:
 
-**Important:** If gdoc-downloader skill is not available, inform the user they need to install the jira-tools plugin first.
+```bash
+cd /tmp && python3 <skill-base-directory>/../gdoc-export/scripts/export.py "https://docs.google.com/document/d/1TW_Mki_ye7d7vcII2al35BvdSiYmJl2yoK_qFlSs5QE/edit?tab=t.0" --format markdown
+```
+
+This document contains the tested ACM configurations.
 
 ### Step 2: Extract Request Details
 
@@ -121,12 +122,12 @@ Recommendation: NEEDS REVIEW - Non-OCP platform requires additional validation
 
 ## Error Handling
 
-- If gdoc-downloader fails: Inform user and suggest checking Google credentials
+- If gdoc-export fails: Inform user and suggest checking Google credentials
 - If test data is empty: Report error and suggest checking document access
 - If request is unclear: Ask user to clarify the ACM version and platform details
 
 ## Notes
 
-- This skill integrates with the gdoc-downloader from jira-tools plugin
+- This skill depends on the gdoc-export skill (sibling skill in acm-management plugin)
 - Test data document URL is hardcoded but can be updated if needed
 - Always prioritize target/planned versions over current versions in upgrade scenarios
